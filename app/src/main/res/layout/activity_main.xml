@@ -1,18 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
     tools:context="douyin.dongjinjin.com.douyin.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_height="50dp">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:text="返回"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#aaaaaa"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_editview"
+            android:hint="请输入要搜索的内容"
+            android:textColorHint="#000000"
+            android:gravity="top"
+            android:padding="15dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#afa">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#ffffff"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:text="发现更多"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#aaaaaa"
+                android:textSize="15dp"
+                android:layout_height="20dp"></TextView>
+
+            <com.stx.xhb.xbanner.XBanner
+                android:id="@+id/xb"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+            </com.stx.xhb.xbanner.XBanner>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
